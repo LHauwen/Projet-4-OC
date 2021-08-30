@@ -44,7 +44,7 @@ endif;
         </div>
     </nav>
     <header class="masthead">
-        <img src="../public/assets/img/Bg1.jpg">
+        <img src="../public/assets/img/Bg2.jpg">
 </header>
 <main class="container">
     <section class="row">
