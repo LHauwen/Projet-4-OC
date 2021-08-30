@@ -36,13 +36,16 @@ foreach ($articles as $article) {
             <a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a>
         </h2>
         </header>
-
+    <section>
         <p><?= nl2br(htmlspecialchars($article->getContent())); ?></p><br>
+    </section>
+    <footer>
 
         <p><?= htmlspecialchars($article->getAuthor()); ?></p>
         <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
+    </footer>
     </article>
-    <br>
+    <br/>
     <?php
 }
 ?>
