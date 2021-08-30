@@ -1,4 +1,9 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script></head>
+<body>
+  <?php
 /**
  * Si existance d'un article, alors on affiche ses données pré-remplies => modification
  * Sinon champs vide => insertion
@@ -23,3 +28,6 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
     <?= isset($errors['content']) ? $errors['content'] : '' ?>
     <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
 </form>
+ <script>
+   CKEDITOR.replace( 'contenu', {allowedContent : true} );
+ </script>

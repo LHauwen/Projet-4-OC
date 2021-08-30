@@ -30,14 +30,18 @@ endif;
 /** @var \App\src\model\Article $articles */
 foreach ($articles as $article) {
     ?>
-    <div>
+    <article>
+        <header>
         <h2>
             <a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a>
         </h2>
-        <p><?= nl2br(htmlspecialchars($article->getContent())); ?></p>
+        </header>
+
+        <p><?= nl2br(htmlspecialchars($article->getContent())); ?></p><br>
+
         <p><?= htmlspecialchars($article->getAuthor()); ?></p>
         <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
-    </div>
+    </article>
     <br>
     <?php
 }
