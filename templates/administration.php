@@ -25,7 +25,7 @@
             <tr>
                 <td><?= htmlspecialchars($article->getId());?></td>
                 <td><a href="../public/index.php?route=article&amp;articleId=<?= htmlspecialchars($article->getId())?>"><?= htmlspecialchars($article->getTitle()); ?></a></td>
-            <td><?= substr(htmlspecialchars($article->getContent()), 0, 150);?></td>
+            <td><?= substr(htmlspecialchars_decode($article->getContent()), 0, 150);?></td>
             <td><?= htmlspecialchars($article->getAuthor());?></td>
             <td>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></td>
             <td>

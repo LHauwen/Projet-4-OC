@@ -1,25 +1,38 @@
 <?php $this->title = 'Article'; ?>
-<h1>Mon blog</h1>
-<p>En construction</p>
+
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
 <?= $this->session->show('delete_article'); ?>
 <?= $this->session->show('add_comment'); ?>
 <?= $this->session->show('flag_comment'); ?>
 <?= $this->session->show('delete_comment'); ?>
-<div>
+
+
+
+<article>
+    <section>
     <h2><?= htmlspecialchars($article->getTitle()); ?></h2>
-    <p><?= nl2br(htmlspecialchars($article->getContent())); ?></p>
+    </section>
+
+    <section>
+    <?= nl2br(htmlspecialchars($article->getContent())); ?>
+    </section>
+    <section>
     <p><?= htmlspecialchars($article->getAuthor()); ?></p>
     <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
-</div>
-<div class="actions">
+    </section>
+
+    
+<section class="actions">
     <p><a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a></p>
     <p><a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a></p>
-</div>
+</section>
+</article>
+
 <br>
 <a href="../public/index.php">Retour à l'accueil</a>
-<div id="comments" class="text-left">
+
+<aside id="comments" class="text-left">
     <h3>Ajouter un commentaire</h3>
     <?php include 'form_comment.php'; ?>
     <h3>Commentaires</h3>
@@ -38,4 +51,4 @@
         ?><p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p><?php
     }
     ?>
-</div>
+</aside>
