@@ -9,8 +9,11 @@
     <title><?= $title ?></title>
 </head>
 <body>
-    <main id="content">
+    <main class="container" id="content">
+        <section class="row">
         <?= $content ?>
+        </section>
     </main>
+    <script src="https://kit.fontawesome.com/c93af533ba.js" crossorigin="anonymous"></script>
 </body>
 </html>
