@@ -8,9 +8,11 @@
 
 
 
+
+<header>
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
     <section class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.php"><img src="../public/assets/img/jfBs.png" alt="Logo du site"></a>
+        <a class="navbar-brand" href="index.php"><img src="../public/assets/img/jfWs.png" alt="Logo du site"></a>
 
         <ul class="navbar-nav ms-auto py-4 py-lg-0">
             <?php
@@ -42,15 +44,13 @@
     </section>
 
 </nav>
-<header class="masthead">
+    <section class="overlay">
 <h1 class="blogTitle">Un billet simple pour l'Alaska</h1>
+</section>
 </header>
 
 <main class="container">
     <section class="row">
-
-
-
 
         <?php
 /** @var \App\src\model\Article $articles */
@@ -67,7 +67,6 @@ foreach ($articles as $article) {
                 <p><?= nl2br(htmlspecialchars_decode($article->getContent())); ?></p><br>
             </section>
             <section>
-
                 <p><?= htmlspecialchars($article->getAuthor()); ?></p>
                 <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
             </section>
