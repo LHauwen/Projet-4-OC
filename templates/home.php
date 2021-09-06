@@ -19,14 +19,14 @@
                     //Menu dynamique si l'utilisateur est connecté
                     if ($this->session->getUserInfo('pseudo')) :
                     ?>
-            <p class="px-lg-3 py-3 py-lg-4">Bienvenue sur votre espace
+            <p class="px-lg-3 py-3 py-lg-4" style="color:white;">Bienvenue sur votre espace
                 <?= ucfirst(htmlspecialchars($this->session->getUserInfo('pseudo')))?></p>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color:white;"
                     href="../public/index.php?route=logout">Déconnexion</a></li>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color:white;"
                     href="../public/index.php?route=profile">Profil</a></li>
             <?php if($this->session->getUserInfo('role') === 'admin') :?>
-            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" style="color:white;"
                     href="../public/index.php?route=administration">Administration</a></li>
             <?php endif;?>
             <?php
