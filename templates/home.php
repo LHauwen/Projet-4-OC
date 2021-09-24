@@ -19,7 +19,7 @@
                     //Menu dynamique si l'utilisateur est connecté
                     if ($this->session->getUserInfo('pseudo')) :
                     ?>
-            <p class="px-lg-3 py-3 py-lg-4">Bienvenue sur votre espace
+            <p class="px-lg-3 py-3 py-lg-4" style="color:white">Bienvenue sur votre espace
                 <?= ucfirst(htmlspecialchars($this->session->getUserInfo('pseudo')))?></p>
             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                     href="../public/index.php?route=logout">Déconnexion</a></li>
@@ -57,19 +57,13 @@
 foreach ($articles as $article) {
     ?>
         <article>
-            <section>
-                <h2>
-                    <a
-                        href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a>
-                </h2>
-            </section>
-            <section>
+           
+                <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
                 <p><?= nl2br(htmlspecialchars_decode($article->getContent())); ?></p><br>
-            </section>
-            <section>
+            
                 <p><?= htmlspecialchars($article->getAuthor()); ?></p>
                 <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
-            </section>
+            
         </article>
         <br />
         <?php
