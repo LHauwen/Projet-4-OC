@@ -8,7 +8,40 @@
 
 
 
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <section class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.php"><img src="../public/assets/img/jfWs.png" alt="Logo du site"></a>
 
+        <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <?php
+                    //Menu dynamique si l'utilisateur est connecté
+                    if ($this->session->getUserInfo('pseudo')) :
+                    ?>
+            <p class="px-lg-3 py-3 py-lg-4" style="color:white">Bienvenue sur votre espace
+                <?= ucfirst(htmlspecialchars($this->session->getUserInfo('pseudo')))?></p>
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                    href="../public/index.php?route=logout">Déconnexion</a></li>
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                    href="../public/index.php?route=profile">Profil</a></li>
+            <?php if($this->session->getUserInfo('role') === 'admin') :?>
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                    href="../public/index.php?route=administration">Administration</a></li>
+            <?php endif;?>
+            <?php
+            else:
+            ?>
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                    href="../public/index.php?route=register">Inscription</a></li>
+            <li class="nav-item"> <a class="nav-link px-lg-3 py-3 py-lg-4"
+                    href="../public/index.php?route=login">Connexion</a></li>
+            <?php
+            endif;
+            ?>
+
+        </ul>
+    </section>
+
+</nav>
 <header>
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
     <section class="container px-4 px-lg-5">
