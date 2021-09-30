@@ -31,9 +31,9 @@
             else:
             ?>
             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
-                    href="../public/index.php?route=register">Inscription</a></li>
+                    href="../public/index.php?route=register"><i class="bi bi-person-plus"></i> Inscription</a></li>
             <li class="nav-item"> <a class="nav-link px-lg-3 py-3 py-lg-4"
-                    href="../public/index.php?route=login">Connexion</a></li>
+                    href="../public/index.php?route=login"><i class="bi bi-plug"></i> Connexion</a></li>
             <?php
             endif;
             ?>
