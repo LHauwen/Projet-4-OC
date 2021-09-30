@@ -16,7 +16,6 @@
 
     <?= $content ?>
 
-    <script src="https://kit.fontawesome.com/c93af533ba.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
