@@ -7,19 +7,16 @@
 <?= $this->session->show('delete_account'); ?>
 
 
-
-
-<header>
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
     <section class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.php"><img src="../public/assets/img/jfWs.png" alt="Logo du site"></a>
+        <a class="navbar-brand" href="index.php"><img src="../public/assets/img/jfBs.png" alt="Logo du site"></a>
 
         <ul class="navbar-nav ms-auto py-4 py-lg-0">
             <?php
                     //Menu dynamique si l'utilisateur est connecté
                     if ($this->session->getUserInfo('pseudo')) :
                     ?>
-            <p class="px-lg-3 py-3 py-lg-4" style="color:white">Bienvenue sur votre espace
+            <p class="px-lg-3 py-3 py-lg-4">Bienvenue sur votre espace
                 <?= ucfirst(htmlspecialchars($this->session->getUserInfo('pseudo')))?></p>
             <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                     href="../public/index.php?route=logout">Déconnexion</a></li>
@@ -44,6 +41,9 @@
     </section>
 
 </nav>
+
+<header>
+
     <section class="overlay">
 <h1 class="blogTitle">Un billet simple pour l'Alaska</h1>
 </section>
@@ -56,11 +56,12 @@
 /** @var \App\src\model\Article $articles */
 foreach ($articles as $article) {
     ?>
-        <article>
+        <article class="p-5 mb-4 bg-light rounded-3">
            
-                <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
+                <h2 class="text-center" style="font-family: 'DM Serif Display', serif;"><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
+               <div class="content" style="padding: 5%">
                 <p><?= nl2br(htmlspecialchars_decode($article->getContent())); ?></p><br>
-            
+                </div>
                 <p><?= htmlspecialchars($article->getAuthor()); ?></p>
                 <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
             

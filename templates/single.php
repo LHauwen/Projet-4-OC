@@ -7,7 +7,10 @@
 <?= $this->session->show('flag_comment'); ?>
 <?= $this->session->show('delete_comment'); ?>
 
-
+<section class="overlay">
+<h1 class="blogTitle">Un billet simple pour l'Alaska</h1>
+</section>
+</header>
 
 <article>
     <section>
