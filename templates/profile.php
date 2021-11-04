@@ -6,8 +6,8 @@ $user = $this->session->get('user');
 //TODO: enregister connexion après inscription
 //TODO: si non connecté ou connexion espirée, redirect login
 ?>
-<h1>Mon blog</h1>
-<p>En construction</p>
+<section>
+
 <div>
     <h2>Votre profil <?= $this->session->getUserInfo('pseudo'); ?></h2>
     <p>Identifiant du compte : <?= $this->session->getUserInfo('id') ?></p>
@@ -17,3 +17,4 @@ $user = $this->session->get('user');
 </div>
 <br>
 <a href="../public/index.php">Retour à l'accueil</a>
+</section>
