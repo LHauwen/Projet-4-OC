@@ -73,8 +73,10 @@
 </nav>
 
 <header>
-<h1><?= $title ?></h1>
-<a href="../public/index.php" style="color: white;">Retour à l'accueil</a>
+    <h1>Un billet simple pour l'Alaska</h1>
+
+<h4 class="litleTitle"><?= $title ?></h4>
+
 </header>
 
     <?= $content ?>

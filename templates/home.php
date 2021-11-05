@@ -7,10 +7,6 @@
 <?= $this->session->show('delete_account'); ?>
 
 
-
-
-
-
 <main class="container">
     <section class="row">
 
@@ -20,7 +16,7 @@ foreach ($articles as $article) {
     ?>
         <article class="p-5 mb-4 bg-light rounded-3">
            
-                <h2 class=""><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
+                <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
                 <p><?= nl2br(htmlspecialchars_decode($article->getContent())); ?></p><br>
             
                 <p><?= htmlspecialchars($article->getAuthor()); ?></p>

@@ -10,4 +10,26 @@ h1{
     color: white;
     text-align: center;
     margin: auto;
+    font-size: 4em;
+}
+h4{
+  font-family: 'Abril Fatface', cursive;
+  color:orange;
+  margin: auto;
+  font-size: 1.5em;
+}
+h2{
+  font-size: 4em;
+  font-family: 'Abril Fatface', cursive;
+  color:orange;
+}
+h2 a{
+  font-size: 2em;
+  font-family: 'Abril Fatface', cursive;
+  color:orange;
+text-decoration: none;
+}
+
+h2 a:hover{
+  color: purple;
 }
