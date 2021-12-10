@@ -44,10 +44,13 @@
 
 <br>
 
-
-<aside id="comments" class="text-left">
+<div class="row align-items-start custom-line">
+<aside class="col">
     <h3>Ajouter un commentaire</h3>
     <?php include 'form_comment.php'; ?>
+
+    </aside>
+<aside class="col">
     <h3>Commentaires</h3>
     <?php
     foreach ($comments as $comment) {
@@ -56,7 +59,7 @@
         <p>Posté le : <?= htmlspecialchars($comment->getCreatedAt()) ?></p>
         <?php
         if ($comment->isFlag()) {
-            ?><p class="flag">Ce commentaire à été signalé</p>
+            ?><p class="flag center">Ce commentaire à été signalé</p>
             <?php
         } else {
             ?><p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId() ?>">Signaler le commentaire</a></p>
@@ -64,6 +67,8 @@
         ?><p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p><?php
     }
     ?>
+
 </aside>
+</div>
 </div>
 </div>
