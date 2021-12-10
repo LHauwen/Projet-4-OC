@@ -19,8 +19,12 @@ foreach ($articles as $article) {
                 <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()) ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
                 <p><?= nl2br(htmlspecialchars_decode($article->getContent())); ?></p><br>
             
-                <p><?= htmlspecialchars($article->getAuthor()); ?></p>
-                <p>Crée le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
+
+
+<svg xmlns="http://www.w3.org/2000/svg"; id="dots" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+  <title>Rédigé par : <?= htmlspecialchars($article->getAuthor()); ?> le <?= htmlspecialchars($article->getCreatedAt()); ?></title>
+</svg>
             
         </article>
         <br />
