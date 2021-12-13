@@ -14,7 +14,11 @@ function verifInput(input){
       break;
       case 'password':
         test = pwdRegex.test(input.value);
+<<<<<<< HEAD
         msg = 'Mot de passe incorrect (Minimum 8 caractères dont 1 Majuscule et un caractère spéciale)';
+=======
+        msg = 'Mot de passe incorrect (Minimum 8 caractères dont 1 majuscule, 1 chiffre et un caractère spéciale)';
+>>>>>>> 6ac56be66813e436319954b9e548f068ca85b538
       break;
       default:
         
