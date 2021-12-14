@@ -7,7 +7,7 @@ $submit = $route === 'addComment' ? 'Ajouter' : 'Mettre à jour';
       <div class="form-group">
     <label for="pseudo">
         <input type="text" name="pseudo" class="form-control"  id="pseudo" placeholder="Pseudo"
-               value="<?= isset($post) ? htmlspecialchars($post->get('pseudo')) : ''; ?>">
+               value="<?= ucfirst(htmlspecialchars($this->session->getUserInfo('pseudo')))?>">
     </label>
       
     <?= isset($errors['pseudo']) ? $errors['pseudo'] : ''; ?>

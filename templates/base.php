@@ -75,7 +75,7 @@
 <header>
     <h1>Un billet simple pour l'Alaska</h1>
 
-<h4 class="litleTitle"><?= $title ?></h4>
+<h4><?= $title ?></h4>
 
 </header>
 

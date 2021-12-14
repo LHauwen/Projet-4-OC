@@ -33,3 +33,6 @@ text-decoration: none;
 h2 a:hover{
   color: purple;
 }
+a.ProfilOption {
+  color:purple;
+}
