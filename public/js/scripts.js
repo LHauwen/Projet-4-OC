@@ -2,23 +2,19 @@ function verifInput(input){
   
     const inputType = input.getAttribute('type');
     // Name => Abcdef - 2 caractères minimum
-    const nameRegex = /^[a-zA-Z-]{2,}$/;
+    const pseudoRegex = /^[a-zA-Z-]{2,}$/;
     // Password => 8caractères minimum + 1 majuscule minimum + 1 caractère spécial
     const pwdRegex = /((?=.*[0-9])(?=.*[A-Z])(?=.*[!+*&#$@%€])){8,}/;
     let test, msg;
     
     switch(inputType){
       case 'text':
-        test = nameRegex.test(input.value);
+        test = pseudoRegex.test(input.value);
         msg = 'Nom incorrect (minimum 2 caractères , pas de caractères spéciaux)';
       break;
       case 'password':
         test = pwdRegex.test(input.value);
-<<<<<<< HEAD
-        msg = 'Mot de passe incorrect (Minimum 8 caractères dont 1 Majuscule et un caractère spéciale)';
-=======
-        msg = 'Mot de passe incorrect (Minimum 8 caractères dont 1 majuscule, 1 chiffre et un caractère spéciale)';
->>>>>>> 6ac56be66813e436319954b9e548f068ca85b538
+
       break;
       default:
         

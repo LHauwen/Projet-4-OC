@@ -45,9 +45,13 @@
 <br>
 
 
-<aside id="comments" class="text-left">
+<section id="comments" class="container row justify-content-around">
+    <div class="col-sm-3">
     <h3>Ajouter un commentaire</h3>
     <?php include 'form_comment.php'; ?>
+
+    </div>
+    <div class="col-sm-3">
     <h3>Commentaires</h3>
     <?php
     foreach ($comments as $comment) {
@@ -64,6 +68,7 @@
         ?><p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p><?php
     }
     ?>
-</aside>
+    </div>
+</section>
 </div>
 </div>
