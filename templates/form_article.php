@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script src="../vendor/ckeditor/build/ckeditor.js"></script>
+  <script src="../vendor/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
           <textarea name="content" id="contenu" cols="30" rows="10"><?= $content; ?></textarea><br>
           <?= isset($errors['content']) ? $errors['content'] : '' ?>
         </div>
-        <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
+        <input class="btn btn-secondary" type="submit" value="<?= $submit; ?>" id="submit" name="submit">
       </form>
     </div>
   </div>
