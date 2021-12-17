@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script src="../vendor/ckeditor/ckeditor.js"></script>
+  <script src="../vendor/ckeditor/build/ckeditor.js"></script>
 </head>
 
 <body>
