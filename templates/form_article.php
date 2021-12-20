@@ -19,15 +19,22 @@ $title = isset($post) ? htmlspecialchars($post->get('title')) : '';
 $content = isset($post) ? htmlspecialchars($post->get('content')) : '';
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
 ?>
-<form action="../public/index.php?route=<?= $route; ?>" method="post">
-    <label for="title">Titre</label><br>
-    <input type="text" id="title" name="title" value="<?= $title; ?>"><br>
+<div class="container">
+  <div class="row">
+    
+<form style="margin-top: 50px;" action="../public/index.php?route=<?= $route; ?>" method="post">
+<div class="form-group">
+    <input class="form-control-lg" style="width: 100%;"  type="text" id="title" name="title" value="<?= $title; ?>" placeholder="Titre"><br>
     <?= isset($errors['title']) ? $errors['title'] : '' ?>
-    <label for="content">Contenu</label><br>
-    <textarea name="content" id="contenu" cols="30" rows="10"><?= $content; ?></textarea><br>
+    </div>
+    <br>
+    <textarea name="content"id="contenu" cols="30" rows="10"><?= $content; ?></textarea><br>
     <?= isset($errors['content']) ? $errors['content'] : '' ?>
-    <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
+ 
+    <input type="submit" class="btn btn-primary" value="<?= $submit; ?>" id="submit" name="submit">
 </form>
+</div>
+    </div>
  <script>
    CKEDITOR.replace( 'contenu', {allowedContent : true} );
  </script>
