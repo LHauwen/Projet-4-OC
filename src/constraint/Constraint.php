@@ -9,10 +9,7 @@ namespace App\src\constraint;
  */
 class Constraint
 {
-    /**
-     * Contraintes à implémenter : email, tel, range
-     */
-    
+ 
     /**
      * Contrainte de validation valeur non nulle
      * @param $name Nom de la propriété
