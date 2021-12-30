@@ -11,7 +11,7 @@ $submit = $route === 'addComment' ? 'Ajouter' : 'Mettre à jour';
     </label>
       
     <?= isset($errors['pseudo']) ? $errors['pseudo'] : ''; ?>
-      </div>
+      </div><br>
     <div class="form-group">
     <label for="content">
         <textarea name="content" id="content" class="form-control"  cols="30" rows="10" placeholder="Votre commentaire"><?= isset($post) ? htmlspecialchars($post->get('content')): ''; ?></textarea>
